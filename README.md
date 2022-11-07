@@ -39,6 +39,14 @@ By clicking on Import Icon (left side menu) you can upload a new JSON Document
 
 ![Upload Document](docs/images/screenshot4.png?raw=true)
 
+## JsonCrack README
+
+Please read JsonCrack [README.md](https://github.com/AykutSarac/jsoncrack.com/blob/main/README.md) file
+
+## JsonCrack LICENSE
+
+Please read JsonCrack [LICENSE](https://github.com/AykutSarac/jsoncrack.com/blob/main/LICENSE) file
+
 ## Uninstall
 
 To uninstall the extension just execute:
