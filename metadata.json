@@ -1,0 +1,12 @@
+{
+  "name": "JSON Crack",
+  "provider": "Marcelo Ochoa",
+  "icon": "jsoncrack.svg",
+  "ui": {
+    "dashboard-tab": {
+      "title": "JSON Crack",
+      "root": "/ui",
+      "src": "editor.html"
+    }
+  }
+}
