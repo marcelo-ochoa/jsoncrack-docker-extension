@@ -1,5 +1,5 @@
 diff --git a/next.config.js b/next.config.js
-index 458c26c..7cfa766 100644
+index 975f429..1f03ff2 100644
 --- a/next.config.js
 +++ b/next.config.js
 @@ -10,6 +10,7 @@ const withPWA = require("next-pwa")({
@@ -23,13 +23,13 @@ index 4ec0798..ae8c00b 100644
        >
          <StyledImage
 diff --git a/src/components/Sidebar/index.tsx b/src/components/Sidebar/index.tsx
-index f5818f1..c99f876 100644
+index 011a105..8252981 100644
 --- a/src/components/Sidebar/index.tsx
 +++ b/src/components/Sidebar/index.tsx
-@@ -237,21 +237,21 @@ export const Sidebar: React.FC = () => {
+@@ -258,21 +258,21 @@ export const Sidebar: React.FC = () => {
        <StyledBottomWrapper>
          <StyledElement>
-           <Link href="https://twitter.com/aykutsarach">
+           <Link href="https://twitter.com/jsoncrack">
 -            <a aria-label="Twitter" rel="me" target="_blank">
 +            <a aria-label="Twitter" rel="me">
                <AiOutlineTwitter />
@@ -52,7 +52,7 @@ index f5818f1..c99f876 100644
              </a>
            </Link>
 diff --git a/src/components/Sponsors/index.tsx b/src/components/Sponsors/index.tsx
-index 54f7698..1694282 100644
+index dca9791..7682a1a 100644
 --- a/src/components/Sponsors/index.tsx
 +++ b/src/components/Sponsors/index.tsx
 @@ -85,7 +85,7 @@ export const Sponsors = () => {
@@ -65,10 +65,10 @@ index 54f7698..1694282 100644
                src={user.avatar}
                alt={user.handle}
 diff --git a/src/containers/Home/index.tsx b/src/containers/Home/index.tsx
-index 4dc250a..56318e6 100644
+index 1081d90..cc7c06a 100644
 --- a/src/containers/Home/index.tsx
 +++ b/src/containers/Home/index.tsx
-@@ -18,7 +18,7 @@ import * as Styles from "./styles";
+@@ -20,7 +20,7 @@ import * as Styles from "./styles";
  
  const Navbar = () => (
    <Styles.StyledNavbar>
@@ -77,7 +77,7 @@ index 4dc250a..56318e6 100644
      <Link href="#features" passHref>
        <Styles.StyledNavLink>Features</Styles.StyledNavLink>
      </Link>
-@@ -27,7 +27,6 @@ const Navbar = () => (
+@@ -29,7 +29,6 @@ const Navbar = () => (
      </Link>
      <Styles.StyledNavLink
        href="https://github.com/AykutSarac/jsoncrack.com"
@@ -85,25 +85,16 @@ index 4dc250a..56318e6 100644
        rel="external"
      >
        GitHub
-@@ -49,7 +48,7 @@ const HeroSection = () => {
-         graphs.
+@@ -52,7 +51,7 @@ const HeroSection = () => {
        </Styles.StyledSubTitle>
        <Styles.StyledMinorTitle>Paste - Import - Fetch!</Styles.StyledMinorTitle>
--      <Styles.StyledButton rel="prefetch" href="/editor" target="_blank" link>
+ 
+-      <Styles.StyledButton rel="prefetch" href="/editor" link>
 +      <Styles.StyledButton rel="prefetch" href="/Editor" link>
          GO TO EDITOR
        </Styles.StyledButton>
  
-@@ -68,7 +67,7 @@ const PreviewSection = () => (
-       <Styles.StyledImage
-         width="1200"
-         height="863"
--        src="/jsoncrack-screenshot.webp"
-+        src="https://raw.githubusercontent.com/AykutSarac/jsoncrack.com/main/public/assets/jsoncrack-screenshot.webp"
-         alt="preview"
-       />
-     </Styles.StyledImageWrapper>
-@@ -213,7 +212,6 @@ const Footer = () => (
+@@ -259,7 +258,6 @@ const Footer = () => (
        <Styles.StyledNavLink
          href="https://github.com/AykutSarac/jsoncrack.com"
          rel="external"
@@ -111,7 +102,7 @@ index 4dc250a..56318e6 100644
          aria-label="github"
        >
          <FaGithub size={26} />
-@@ -222,7 +220,6 @@ const Footer = () => (
+@@ -268,7 +266,6 @@ const Footer = () => (
        <Styles.StyledNavLink
          href="https://www.linkedin.com/in/aykutsarac/"
          rel="me"
@@ -119,9 +110,9 @@ index 4dc250a..56318e6 100644
          aria-label="linkedin"
        >
          <FaLinkedin size={26} />
-@@ -231,7 +228,6 @@ const Footer = () => (
+@@ -277,7 +274,6 @@ const Footer = () => (
        <Styles.StyledNavLink
-         href="https://twitter.com/aykutsarach"
+         href="https://twitter.com/jsoncrack"
          rel="me"
 -        target="_blank"
          aria-label="twitter"
@@ -140,29 +131,37 @@ index cb92ea1..ef36a56 100644
              status="DANGER"
              block
 diff --git a/src/containers/Modals/ShareModal/index.tsx b/src/containers/Modals/ShareModal/index.tsx
-index c256b98..dc12cfc 100644
+index 6fbda40..d2606f5 100644
 --- a/src/containers/Modals/ShareModal/index.tsx
 +++ b/src/containers/Modals/ShareModal/index.tsx
-@@ -48,7 +48,7 @@ export const ShareModal: React.FC<ModalProps> = ({ visible, setVisible }) => {
-   const [encodedJson, setEncodedJson] = React.useState("");
+@@ -50,7 +50,7 @@ export const ShareModal: React.FC<ModalProps> = ({ visible, setVisible }) => {
+   const navigate = useRouter();
  
-   const embedText = `<iframe src="${baseURL}/widget?json=${encodedJson}" width="512" height="384" style="border: 2px solid #b9bbbe; border-radius: 6px;"></iframe>`;
+   const embedText = `<iframe id="jsoncrackEmbed" src="${baseURL}/widget></iframe>`;
 -  const shareURL = `${baseURL}/editor?json=${encodedJson}`;
 +  const shareURL = `${baseURL}/Editor?json=${encodedJson}`;
  
    React.useEffect(() => {
      if (visible) {
 diff --git a/src/pages/Widget/index.tsx b/src/pages/Widget/index.tsx
-index 93eaea9..ebdefc8 100644
+index e8c3d43..5f9710c 100644
 --- a/src/pages/Widget/index.tsx
 +++ b/src/pages/Widget/index.tsx
-@@ -62,8 +62,7 @@ const WidgetPage = () => {
-     <>
-       <Graph isWidget />
-       <StyledAttribute
--        href={`${baseURL}/editor?json=${query.json}`}
--        target="_blank"
-+        href={`${baseURL}/Editor?json=${query.json}`}
-         rel="noreferrer"
-       >
+@@ -111,7 +111,7 @@ const WidgetPage = () => {
+       <StyledDeprecated>
+         <h1>⚠️ Deprecated ⚠️</h1>
+         <br />
+-        <a href="https://jsoncrack.com/embed" target="_blank" rel="noreferrer">
++        <a href="https://jsoncrack.com/embed" rel="noreferrer">
+           https://jsoncrack.com/embed
+         </a>
+       </StyledDeprecated>
+@@ -125,7 +125,7 @@ const WidgetPage = () => {
+         visible={isModalVisible}
+         closeModal={() => setModalVisible(false)}
+       />
+-      <StyledAttribute href={`${baseURL}/editor`} target="_blank" rel="noreferrer">
++      <StyledAttribute href={`${baseURL}/Editor`} rel="noreferrer">
          jsoncrack.com
+       </StyledAttribute>
+     </>
