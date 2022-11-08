@@ -47,6 +47,18 @@ Please read JsonCrack [README.md](https://github.com/AykutSarac/jsoncrack.com/bl
 
 Please read JsonCrack [LICENSE](https://github.com/AykutSarac/jsoncrack.com/blob/main/LICENSE) file
 
+## Build from sources
+
+To install the extension from source:
+
+```bash
+git clone --recurse-submodules https://github.com/marcelo-ochoa/jsoncrack-docker-extension
+cd jsoncrack-docker-extension/client
+git apply  ../jsoncrack.patch
+cd ..
+make install
+```
+
 ## Uninstall
 
 To uninstall the extension just execute:
