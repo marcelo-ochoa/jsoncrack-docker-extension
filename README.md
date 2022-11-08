@@ -1,4 +1,4 @@
-# Docker Extension
+# JSONCrack Docker Extension
 
 JSON Crack extension for Docker Desktop, an integration of [jsoncrack.com](https://jsoncrack.com) tool.
 
@@ -21,7 +21,7 @@ Extension "JSON Crack" installed successfully
 
 **Note**: Docker Extension CLI is required to execute above command, follow the instructions at [Extension SDK (Beta) -> Prerequisites](https://docs.docker.com/desktop/extensions-sdk/#prerequisites) page for instructions on how to add it.
 
-## Using JSON Crack Docker Extension
+## Using JSONCrack Docker Extension
 
 Once the extension is installed a new extension is listed at the pane Extension (Beta) of Docker Desktop.
 
@@ -39,11 +39,11 @@ By clicking on Import Icon (left side menu) you can upload a new JSON Document
 
 ![Upload Document](docs/images/screenshot4.png?raw=true)
 
-## JsonCrack README
+## JSONCrack README
 
 Please read JsonCrack [README.md](https://github.com/AykutSarac/jsoncrack.com/blob/main/README.md) file
 
-## JsonCrack LICENSE
+## JSONCrack LICENSE
 
 Please read JsonCrack [LICENSE](https://github.com/AykutSarac/jsoncrack.com/blob/main/LICENSE) file
 
