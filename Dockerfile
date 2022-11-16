@@ -24,7 +24,7 @@ LABEL com.docker.extension.additional-urls="[{\"title\":\"Documentation\",\"url\
     {\"title\":\"License\",\"url\":\"https://github.com/marcelo-ochoa/jsoncrack-docker-extension/blob/main/LICENSE\"}]"
 LABEL com.docker.extension.detailed-description="Docker Extension for using JSON Crack tool"
 LABEL com.docker.extension.changelog="See full <a href=\"https://github.com/marcelo-ochoa/jsoncrack-docker-extension/blob/main/CHANGELOG.md\">change log</a>"
-LABEL com.docker.desktop.extension.icon="https://raw.githubusercontent.com/marcelo-ochoa/jsoncrack-docker-extension/main/client/public/favicon.ico"
+LABEL com.docker.desktop.extension.icon="https://raw.githubusercontent.com/AykutSarac/jsoncrack.com/main/public/favicon.ico"
 LABEL com.docker.extension.detailed-description="JSON Crack is a tool that generates graph diagrams from JSON objects. These diagrams are much easier to navigate than the textual format and to make it even more convenient, the tool also allows you to search the nodes. Additionally, the generated diagrams can also be downloaded or clipboard as image."
 COPY docker-compose.yml jsoncrack.svg metadata.json ./
 

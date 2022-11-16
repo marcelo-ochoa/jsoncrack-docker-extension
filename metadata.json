@@ -1,6 +1,4 @@
 {
-  "name": "JSON Crack",
-  "provider": "Marcelo Ochoa",
   "icon": "jsoncrack.svg",
   "ui": {
     "dashboard-tab": {
