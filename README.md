@@ -7,10 +7,10 @@ JSON Crack extension for Docker Desktop, an integration of [jsoncrack.com](https
 Until this extension is ready at Docker Extension Hub you can install just by executing:
 
 ```bash
-$ docker extension install mochoa/jsoncrack-docker-extension:2.0.2
+$ docker extension install mochoa/jsoncrack-docker-extension:2.5.0
 Extensions can install binaries, invoke commands and access files on your machine. 
 Are you sure you want to continue? [y/N] y
-Installing new extension "mochoa/jsoncrack-docker-extension:2.0.2"
+Installing new extension "mochoa/jsoncrack-docker-extension:2.5.0"
 Installing service in Desktop VM...
 Setting additional compose attributes
 VM service started
@@ -64,7 +64,7 @@ make install
 To uninstall the extension just execute:
 
 ```bash
-$ docker extension uninstall mochoa/jsoncrack-docker-extension:2.0.2
+$ docker extension uninstall mochoa/jsoncrack-docker-extension:2.5.0
 Extension "JSON Crack" uninstalled successfully
 ```
 

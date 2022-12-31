@@ -1,8 +1,8 @@
 all: clean extension install
 
 ORG=mochoa
-VERSION=2.0
-MINOR=2
+VERSION=2.5
+MINOR=0
 IMAGE_NAME=$(ORG)/jsoncrack-docker-extension
 TAGGED_IMAGE_NAME=$(IMAGE_NAME):$(VERSION).${MINOR}
 
